@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Display from "./display";
 
 // const Search = () => {
 //   return <input />;
@@ -15,9 +16,9 @@ class Search extends Component {
     return (
       <div>
         <input
+          value={this.state.term}
           onChange={event => this.setState({ term: event.target.value })}
         />
-        {/* Value of the input : {this.state.term} */}
       </div>
     );
   }
