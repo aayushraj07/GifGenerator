@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import axios from "axios";
+// import axios from "axios";
 
 // import gif from "giphy-api";
 
