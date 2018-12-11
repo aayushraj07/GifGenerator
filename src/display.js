@@ -1,13 +1,5 @@
 import React, { Component } from "react";
 
-// const Display = props => {
-//   return (
-//     <div>
-//       <ul>{this.props.gifs}</ul>
-//     </div>
-//   );
-// };
-
 class Display extends Component {
   state = {
     URL: this.props.gifs
@@ -23,8 +15,3 @@ class Display extends Component {
 }
 
 export default Display;
-// export default Display;
-
-///First make index and app.js in one file
-
-////then do the props!!
