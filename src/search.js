@@ -1,39 +1,11 @@
 import React, { Component } from "react";
-import Display from "./display";
-import axios from "axios";
-
-// const Search = () => {
-//   return <input />;
-// };
-/*http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=YOUR_API_KEY&limit=5*/
 
 class Search extends Component {
   state = {
-    gifUrl: "",
-    keyword: "",
-    giphyApiKey: "wrSXrhvnmsHgkOlpWT5iE7kJbmxxInFG",
-    rating: "G"
+    URL: this.props.url,
+    keyword: this.props.keyword,
+    forButton: this.props.clickMethod
   };
-
-  loadGif = () => {
-    axios
-      .get(
-        `http://api.giphy.com/v1/gifs/search?q=${this.state.keyword}&api_key=${
-          this.state.giphyApiKey
-        }&limit=1`
-      )
-      .then(response => {
-        //To avoid error when keyword is empty.
-        if (response.data.data.length > 0) {
-          this.setState({
-            gifUrl: response.data.data[0].images.downsized.url
-          });
-        }
-        console.log(response);
-      });
-  };
-
-  // loadGif = ;
 
   render() {
     return (
@@ -41,15 +13,28 @@ class Search extends Component {
         <input
           value={this.state.keyword}
           onChange={event => {
-            this.setState({ keyword: event.target.value });
+            this.setState({ keyword: event.target.keyword });
           }}
         />
-        <button onClick={this.loadGif}>Load Gif</button>
-        <img src={this.state.gifUrl} alt="gifimage" />
+        <button onClick={this.forButton}>Load Gif</button>
       </div>
     );
   }
 }
+// const Search = props => {
+//   return (
+//     <div>
+//       <input
+//         value={props.gif}
+//         onChange={event => {
+//           this.setState({ value: event.target.value });
+//         }}
+//       />
+//       <button onClick={this.loadGif}>Load Gif</button>
+//       <img src={props.gifUrl} alt="gifimage" />
+//     </div>
+//   );
+// };
 
 export default Search;
 
