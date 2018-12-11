@@ -2,25 +2,32 @@ import React, { Component } from "react";
 
 class Search extends Component {
   state = {
-    URL: this.props.url,
-    keyword: this.props.keyword,
-    forButton: this.props.clickMethod
+    inputValue: ""
+  };
+
+  returnKeyword = () => {
+    this.props.onClickMethod(this.state.inputValue);
   };
 
   render() {
     return (
-      <div>
+      <div className="search">
         <input
-          value={this.state.keyword}
+          value={this.state.inputValue}
           onChange={event => {
-            this.setState({ keyword: event.target.keyword });
+            this.setState({ inputValue: event.target.value });
           }}
         />
-        <button onClick={this.forButton}>Load Gif</button>
+        <button className="btn btn-primary" onClick={this.returnKeyword}>
+          Load Gif
+        </button>
       </div>
     );
   }
 }
+
+export default Search;
+
 // const Search = props => {
 //   return (
 //     <div>
@@ -35,8 +42,6 @@ class Search extends Component {
 //     </div>
 //   );
 // };
-
-export default Search;
 
 ////var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=YOUR_API_KEY&limit=5");
 // xhr.done(function (data) { console.log("success got data", data); });

@@ -1,17 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Display extends Component {
-  state = {
-    URL: this.props.gifs
-  };
-
-  render() {
+const Display = props => {
+  if (props.url !== "") {
     return (
       <div>
-        <img src="{this.state.URL}" alt="gifimg" />
+        <img src={props.url} alt="gifimg" />
       </div>
     );
   }
-}
+  return <p>GIF coming here!</p>;
+};
 
 export default Display;
