@@ -48,14 +48,22 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ---
 
 ##In search.js
-*First User inputs the value
-*value get stored in "inputValue" which is the property of the state in search's Component
-*Then user click on the button which has the an event handeler which calls the function "returnKeyword"
-*This function acts as the a callback function to "setKeyword" which is present in the App.js , this function is called and it takes an arguement which is the user's input i.e "keyword"
-*Hence Keyword get transfered to the App.js
-*Now "SetKeyword" function runs and it setState the arguement (i.e user input ) to the keyword which is the App.js's state property.
-*After this "Setkeyword" calls "loadGif" function
-*Since the state has been updated by the another component (using callback function) ,the loadGif can not be simply called
+\*First User inputs the value
+
+\*value get stored in "inputValue" which is the property of the state in search's Component
+
+\*Then user click on the button which has the an event handeler which calls the function "returnKeyword"
+
+\*This function acts as the a callback function to "setKeyword" which is present in the App.js , this function is called and it takes an arguement which is the user's input i.e "keyword"
+
+\*Hence Keyword get transfered to the App.js
+
+\*Now "SetKeyword" function runs and it setState the arguement (i.e user input ) to the keyword which is the App.js's state property.
+
+\*After this "Setkeyword" calls "loadGif" function
+
+\*Since the state has been updated by the another component (using callback function) ,the loadGif can not be simply called
+
 \*It is called in a special way i.e with arrow function
 
 fun(arg,()=> this.newfunction)
