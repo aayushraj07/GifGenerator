@@ -57,3 +57,31 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 *After this "Setkeyword" calls "loadGif" function
 *Since the state has been updated by the another component (using callback function) ,the loadGif can not be simply called
 \*It is called in a special way i.e with arrow function
+
+fun(arg,()=> this.newfunction)
+
+---
+
+## Now API work starts inside loadGif()
+
+\*loadGif function starts with the use of axios
+
+axios.get(\***\*\_\_\_\*\***)
+.then(\***\*\_\_\*\***)
+
+\*Axios first fetches the data and then gives the output .
+
+\*In .get() , we write URL from where we expecting the data
+
+> URL = website / keyword / API_key / limit
+
+*Then .then() ,works on the response it got from the API
+*It first checks whether there is some data or not .
+*Then it setState the data into the 'gifUrl' which is the state property of App component
+*Here ,Axios work is done
+
+*Now in App.js ,next instance is rendered i.e Display
+*In Display component , it renders the gifUrl which it is getting by prop from the app.js
+\*We have used if statement in display so that we dont get any broken result at the inital stage when we dont have a gif to show.
+
+\*This is how our GiGenerator works using API , react major function like state ,props,controlled input.
