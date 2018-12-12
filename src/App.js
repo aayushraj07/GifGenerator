@@ -5,7 +5,7 @@ import Display from "./display";
 import axios from "axios";
 
 const GIPHYAPIKEY = "wrSXrhvnmsHgkOlpWT5iE7kJbmxxInFG";
-const RATING = "G";
+// const RATING = "G";
 
 class App extends Component {
   state = {
