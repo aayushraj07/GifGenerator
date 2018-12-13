@@ -74,7 +74,7 @@ fun(arg,()=> this.newfunction)
 
 * loadGif function starts with the use of axios
 
-axios.get(\***\*\_\_\_\*\***)
+    axios.get(\***\*\_\_\_\*\***)
 .then(\***\*\_\_\*\***)
 
 * Axios first fetches the data and then gives the output .
